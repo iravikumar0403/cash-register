@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cash Register</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+      <h1>Cash Register</h1>
+      <p>Enter bill and cash amount to find how to pay the return amount with minimum notes.</p>
+    </nav>
+    <main>
+      <div id="cash-input" class="input-wrapper">
+        <label id="bill-input" class="input-wrapper">
+          Enter Bill Amount :
+          <input id="bill-amount" type="text"/>
+        </label>
+      </div>
+      <div id="cash-input" class="input-wrapper">
+        <label>
+          Enter Cash Given:
+          <input id="cash-given" type="text"/>
+        </label>
+      </div>
+      <p id="error-msg"></p>
+      <button id="check-btn">Check</button>
+      <table id="table">
+        <caption>Exchange Amount : <span id="exchange-amount">0</span></caption>
+        <tr id="note-group">
+          <th>Note/Coins</th>
+          <!-- Add td with js -->
+        </tr>
+        <tr id="exchange-group">
+          <th>Count</th>
+          <!-- Add td with js -->
+        </tr>
+      </table>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
