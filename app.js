@@ -33,7 +33,7 @@ function renderExchangeTable(values, parentEl){
 function calculateExchanges(){
   let remainingAmount = exchangeAmount;
   let exchangeCount = availableNotes.map(noteValue => {
-    if(remainingAmount > noteValue){
+    if(remainingAmount >= noteValue){
       numberOfNotes = parseInt(remainingAmount/noteValue);
       remainingAmount = remainingAmount%noteValue;
       return numberOfNotes;
