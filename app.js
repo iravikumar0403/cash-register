@@ -6,9 +6,26 @@ const noteGroup = document.getElementById("note-group")
 const exachangeAmoutEl = document.getElementById("exchange-amount")
 const exchangeGroup = document.getElementById("exchange-group")
 const exchangeTable = document.getElementById("table")
+const nextBtn = document.getElementById("next-btn")
+const cashInput = document.getElementById("cash-input")
 
 const availableNotes = [2000, 500, 100, 20, 10, 5, 1];
 let exchangeAmount;
+checkBtn.style.display = "none"
+
+nextBtn.addEventListener('click', ()=>{
+  if(billAmount.value === ""){
+    errorEl.innerHTML = "Please enter the bill amount";
+    return false;
+  }else if(isNaN(billAmount.value)){
+    errorEl.innerHTML = "Invalid Input! Please enter a valid bill amount"
+    return false;
+  }else{
+    checkBtn.style.display = "block"
+    nextBtn.style.display = "none"
+    cashInput.style.display = "block"
+  }
+})
 
 checkBtn.addEventListener('click', ()=>{
   if(validateInputs()){

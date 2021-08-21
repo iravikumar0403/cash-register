@@ -37,10 +37,14 @@ input{
 input:focus{
     outline: none;
 }
+#cash-input{
+    display: none;
+}
 
-#check-btn{
+.btn{
     background-color: blue;
     border: none;
+    margin: 10px;
     padding: 10px 30px;
     color: white;
     border-radius: 10px;
