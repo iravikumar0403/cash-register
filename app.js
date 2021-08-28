@@ -17,10 +17,11 @@ nextBtn.addEventListener('click', ()=>{
   if(billAmount.value === ""){
     errorEl.innerHTML = "Please enter the bill amount";
     return false;
-  }else if(isNaN(billAmount.value)){
+  }else if(isNaN(billAmount.value)  || Number(billAmount.value) < 0){
     errorEl.innerHTML = "Invalid Input! Please enter a valid bill amount"
     return false;
   }else{
+    errorEl.innerHTML = ""
     checkBtn.style.display = "block"
     nextBtn.style.display = "none"
     cashInput.style.display = "block"
@@ -71,7 +72,7 @@ function validateInputs(){
   }else if(cashGiven.value === ""){
     errorEl.innerHTML = "Please enter the cash given";
     return false;
-  }else if(isNaN(cashGiven.value)){
+  }else if(isNaN(cashGiven.value)  || Number(cashGiven.value) < 0){
     errorEl.innerHTML = "Invalid Input! Please enter a valid cash amount"
     return false;
   }else{
